@@ -20,4 +20,12 @@ var credentials=JSON.parse(localStorage.getItem("credentials"))
 
 console.log( credentials.email)
 
+// profile
+function editProfile() {
+    var newName = prompt("Enter your new name:");
+    var newEmail = prompt("Enter your new email:");
+
+    if (newName) document.getElementById("username").textContent = newName;
+    if (newEmail) document.getElementById("email").textContent = newEmail;
+}
 
