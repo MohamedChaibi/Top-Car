@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Cars</title>
     <link rel="stylesheet" href="../style/welcome.css">
-    <link rel="stylesheet" href="../style/sell.css">
+    <!-- <link rel="stylesheet" href="../style/sell.css">    -->
 </head>
 <body>
     <!-- Sidebar -->
@@ -40,17 +40,25 @@
     </header>
 
     <!-- Page Content -->
-    <div class="car-form-container">
+    <form action="./buy.html" class="car-form-container">
     <h2>Add Your Car</h2>
-    <input type="text" id="carName" placeholder="Car Name">
-    <input type="text" id="carPrice" placeholder="Price">
-    <textarea id="carDescription" placeholder="Description"></textarea>
-    <input type="file" id="carPhoto" accept="image/*">
-    <button onclick="addCar()">Add Car</button>
-</div>
+    
+    <input type="text" id="carName" name="name" placeholder="Car Name">
+    <input type="text" id="carType" name="type" placeholder="Type">
+    <input type="number" id="carSpeedmax" name="speedmax" placeholder="Speedmax">
+    <input type="number" id="carPower" name="power" placeholder="Power">
+    <input type="number" id="carAcceleration" name="acceleration" placeholder="Acceleration">
+    <!-- <input type="text" id="carCategory" name="category" placeholder="Category"> -->
+    <!-- <input type ='text' name="cars" id="cars" form="carform"> -->
+    <input type="text" id="carPhoto" name="photo" placeholder="Photo">
+    <input type="number" id="carPrice" name="price" placeholder="Price">
+    <textarea id="carDescription"  name="description" placeholder="Description"></textarea>
+    <input type="submit" value="Add Car"></input>
+    </form>
 
-<div class="car-list-container" id="carList"></div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../script/buy.js"></script>
+    <script src="../script/sell.js"></script>
+    
 </body>
 </html>
